@@ -1,6 +1,4 @@
 import streamlit as st
-import pandas as pd
-import joblib
 
 from utils.why_engine import generate_reason
 from utils.recommend import recommend
@@ -42,8 +40,6 @@ if st.button("Analyze Stress"):
         "peer_pressure": peer,
         "gpa": gpa
     }
-
-    input_df = pd.DataFrame([input_data])
 
     # Prediction
     prediction = fake_model(input_data)
